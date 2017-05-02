@@ -19,7 +19,8 @@
                  [io.framed/std "0.1.2"]
                  [aysylu/loom "1.0.0"]
                  [org.clojure/java.jdbc "0.7.0-alpha3"]
-                 [com.h2database/h2 "1.4.195"]]
+                 [com.h2database/h2 "1.4.195"]
+                 [com.velisco/herbert "0.7.0"]]
   :aot [overseer.runner]
   :plugins [[codox "0.8.13"]]
   :codox {:output-dir "doc/api"})

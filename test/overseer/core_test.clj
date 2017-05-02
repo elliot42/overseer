@@ -4,7 +4,15 @@
            (overseer
              [core :as core]
              [status :as status]
-             [test-utils :as test-utils])))
+             [test-utils :as test-utils])
+           [loom.graph :as graph]))
+
+(deftest test-job?
+  (is (core/job?
+        {:job/id "123"
+         :job/type :intake
+         :job/status :unstarted
+         :job/heartbeat 12345})))
 
 (deftest test-missing-dependencies
   (let [g1 {:foo []
